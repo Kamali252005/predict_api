@@ -1,16 +1,16 @@
 from flask import Flask, request, jsonify
-app = Flask(__name__)
+
+app = Flask(_name_)  # Corrected Flask instance
+
 @app.route('/predict', methods=['GET'])
-
 def predict():
-name= request.args.get('name')
+    name = request.args.get('name')
 
-if name:
-    return jsonify({'error': 'No file uploaded'}), 400
+    if not name:  # Correct condition
+        return jsonify({'error': 'No name provided'}), 400
+    
+    return jsonify({'status': 'success', 'name': name})  # Correct response
 
-else:
-    return jsonify({'status': 'success', 'filename': file.filename})
-    if_name_==_main_':
-        app.run(debug=True)
-
+if _name_ == '_main_':
+    app.run(debug=True)  # Runs Flask server
 
