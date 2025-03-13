@@ -10,5 +10,5 @@ if name:
 
 else:
     return jsonify({'status': 'success', 'filename': file.filename})
-    if_name_==_main_':
+    if_name_=='_main_':
         app.run(debug=True)
